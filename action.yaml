@@ -1,0 +1,15 @@
+name: 'Tag Version'
+description: 'Figure out version number from tags'
+inputs:
+  args:  # id of input
+    description: 'tag-version arguments'
+    required: true
+    default: '-h'
+outputs:
+  version: # id of output
+    description: 'Verion number'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.args }}
