@@ -1,5 +1,8 @@
-name: 'Tag Version'
+name: 'Tag Version Go'
 description: 'Figure out version number from tags'
+branding:
+  icon: 'arrow-up-circle'
+  color: 'white'
 inputs:
   args:  # id of input
     description: 'tag-version arguments'
