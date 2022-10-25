@@ -13,7 +13,7 @@ jobs:
         id: version
         uses: ./
         with:
-          args: '-firs'
+          args: 'major -firs'
       # Use the output from the `hello` step
-      - name: Get the output time
-        run: echo "The time was ${{ steps.version.outputs.version }}"
+      - name: Get version
+        run: echo "Next major version is ${{ steps.version.outputs.version }}"
