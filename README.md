@@ -27,6 +27,8 @@ Version create based in inputs
 
 ## Example usage
 
+```
 uses: actions/tag-version-go@v1
 with:
   args: '-fis'
+```
