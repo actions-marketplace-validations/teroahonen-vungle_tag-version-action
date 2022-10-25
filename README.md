@@ -37,3 +37,11 @@ with:
   command: 'minor'
   args: '-fis'
 ```
+
+When using tag-version, remember to fetch tags. Default `checkout` actions without arguments does not fetch tags. Use `featch-depth: 0` to fetch tags.
+
+```
+uses: actions/checkout@v3
+with:
+  fetch-depth: 0
+```
