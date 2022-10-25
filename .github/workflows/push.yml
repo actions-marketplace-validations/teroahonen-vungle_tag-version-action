@@ -12,6 +12,9 @@ jobs:
       - name: Get version
         id: version
         uses: ./
+      - name: Get version
+        id: version
+        uses: ./
         with:
           args: ' major -firs'
       - name: Print version
