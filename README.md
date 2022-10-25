@@ -19,6 +19,10 @@ This actions wraps go library tag-version to a container. https://github.com/rle
 - default-branch, B, , When set this branch will be used when one cannot be determined.
 ```
 
+## `command`
+
+**Required** `major|minor|patch` , Section of the semantic version in the format v<major>.<minor>.<patch>
+
 ## Outputs
 
 ## `version`
@@ -28,7 +32,8 @@ Version create based in inputs
 ## Example usage
 
 ```
-uses: actions/tag-version-go@v1
+uses: actions/tag-version-action@v1
 with:
+  command: 'minor'
   args: '-fis'
 ```

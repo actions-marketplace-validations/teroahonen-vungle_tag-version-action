@@ -5,6 +5,10 @@ inputs:
     description: 'tag-version arguments'
     required: true
     default: '-h'
+  command:
+    description: 'Section of the semantic version in the format v<major>.<minor>.<patch>'
+    required: true
+    default: 'minor'
 outputs:
   version: # id of output
     description: 'Verion number'
@@ -12,4 +16,5 @@ runs:
   using: 'docker'
   image: 'Dockerfile'
   args:
+    - ${{ inputs.command }}
     - ${{ inputs.args }}

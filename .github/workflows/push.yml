@@ -15,6 +15,7 @@ jobs:
         id: version
         uses: ./
         with:
-          args: ' major -firs'
+          command: major
+          args: -firs
       - name: Print version
         run: echo "Next minor version is ${{ steps.version.outputs.version }}"
