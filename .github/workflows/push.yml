@@ -10,7 +10,6 @@ jobs:
         with:
           fetch-depth: 0
       - name: Get version
-        id: version
         uses: ./
       - name: Get version
         id: version
