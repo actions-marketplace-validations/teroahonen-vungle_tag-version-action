@@ -5,9 +5,11 @@ jobs:
     runs-on: ubuntu-latest
     name: A job to say hello
     steps:
+      - name: Checkout
+        uses: actions/checkout@v3
       - name: Version test
         id: version
-        uses: actions/tag-version-action@v1
+        uses: ./
         with:
           args: '-firs'
       # Use the output from the `hello` step
